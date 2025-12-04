@@ -1,3 +1,4 @@
+apply plugin: "com.google.gms.google-services"
 apply plugin: "com.android.application"
 apply plugin: "org.jetbrains.kotlin.android"
 apply plugin: "com.facebook.react"
@@ -84,6 +85,9 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+    }
+    packagingOptions {
+        pickFirst "**/*.so"
     }
     signingConfigs {
         debug {
